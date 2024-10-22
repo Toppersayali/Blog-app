@@ -7,7 +7,7 @@
 //     console.log(`Connected to Mongodb Database: ${mongoose.connection.host}`.bgMagenta.white);
 //   } catch (error) {
 //     console.log(`MONGO Connect Error: ${error}`.bgRed.white);  
-  
+
 //   }
 // };
 
@@ -17,10 +17,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    const conn = await mongoose.connect(process.env.MONGO_URI);
 
     console.log(`MongoDB Connected: ${conn.connection.host}`.cyan.underline.bold);
   } catch (error) {

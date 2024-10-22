@@ -1,4 +1,4 @@
-const userModel = requie('../models/userModel')
+const userModel = require('../models/userModel')
 
 // create user register user
 exports.registerController = async (req, res) => {
